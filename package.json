@@ -1,0 +1,15 @@
+{
+  "name": "vibe-check",
+  "version": "0.1.0",
+  "description": "Checks the vibe of a site, then will restart a Droplet if bad result",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JulianWebb",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "digitalocean": "^1.2.1"
+  }
+}
