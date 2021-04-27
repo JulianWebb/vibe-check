@@ -8,9 +8,13 @@ const ocean = new DigitalOcean.client(config.personalAccessToken);
 function vibeCheck() {
     log(`Checking the vibe of ${config.vibeURL}. 🔎`)
     axios.get(config.vibeURL)
-        .then(() => {
-            log(`Got good vibes. 👌`);
-            process.exit(0);
+        .then((response) => {
+            if (response.status = 200) {
+                log(`Got good vibes. 👌`);
+                process.exit(0);
+            }
+            log("Got a vibe, not sure if it's a good one. 😰");
+            return vibeRefresh();  
         })
         .catch(error => {
             log(`Bummer, vibe check failed (see below). 😥`)

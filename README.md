@@ -10,4 +10,6 @@ Secret | Description
 ------ | -----------
 vibeURL | The URL for the script to check
 droplet | The ID of the droplet to be rebooted
-personalAccessToken | The DO API Personal Access Token for your account
+personalAccessToken | The DO API Personal Access Token for your account 
+
+It writes it's logs to stdout so pipe/redirect that to a file or program of your choosing.
